@@ -19,8 +19,8 @@ public class Main {
         customerList.add(new Customer("Frederik", "Franck", "MojoOno"));
         customerList.add(new Customer("Mathias","Falcho", "TheMilleniumFalcho"));
         customerList.add(new Customer("André", "Samuelsen", "AndréTheDragon"));
-
-
+        Customer mathias = customerList.get(1);
+        //System.out.println(mathias);
         printCustomers(customerList);
     }
 

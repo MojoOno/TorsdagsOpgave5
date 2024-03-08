@@ -4,24 +4,34 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-
 public class Cafe {
-    private ArrayList<String> coffeeMenu = new ArrayList<>();
+    private ArrayList<String> menuList = new ArrayList<>();
+    String name;
 
-    public void loadMenuData() {
-        File file = new File("src/TaskTwo/coffees.txt");
+    public Cafe(String name){
+        this.name = name;
+    }
+
+    public void loadMenuData(String path) {
+        File file = new File(path);
         try{
             Scanner scanner = new Scanner(file);
+            scanner.nextLine(); //Skip header
+            String dotSpace = ".....";
+
             while(scanner.hasNextLine()){
-                coffeeMenu.add(scanner.nextLine());
+                String[] line = scanner.nextLine().split(",");   //Putting our elements in our menu into an Array.
+                String name = line[0];
+                int price = Integer.parseInt(line[1].trim());
+                menuList.add(name + dotSpace + price);
             }
         }catch (FileNotFoundException e){
             System.out.println("File not found. Check path and filename");
         }
     }
-
-    public ArrayList<String> getCoffeeMenu() {
-        return coffeeMenu;
+    public ArrayList<String> getMenu() {
+        return menuList;
     }
+
+
 }

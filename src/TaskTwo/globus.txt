@@ -1,0 +1,6 @@
+Name, price
+1. Pilsner, 55
+2. IPA, 65
+3. Brown Ale, 60
+4. Stout, 70
+5. Sour, 70

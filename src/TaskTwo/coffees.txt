@@ -1,5 +1,6 @@
-1. Espresso
-2. Americano
-3. Macchiato
-4. Flat White
-5. Latte
+Name, price
+1. Espresso, 26
+2. Americano, 28
+3. Macchiato, 32
+4. Flat White, 38
+5. Latte, 38

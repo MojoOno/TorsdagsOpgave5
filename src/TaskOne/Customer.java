@@ -23,14 +23,6 @@ public class Customer {
                 "\n ";
     }
 
-    public static int getCounter() {
-        return counter;
-    }
-
-    public int getId() {
-        return id;
-    }
-
     public String getFirstName() {
         return firstName;
     }
@@ -41,5 +33,13 @@ public class Customer {
 
     public String getUsername() {
         return username;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public static int getCounter() {
+        return counter;
     }
 }

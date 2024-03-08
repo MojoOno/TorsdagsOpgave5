@@ -15,13 +15,13 @@ public class Main {
         roomsInSchool.add(kitchen);
         roomsInSchool.add(classroom);
 
-        Building school = new Building(roomsInSchool, 30, 4, false);
+        Building school = new Building(roomsInSchool, 3, 2, false);
 
-        System.out.println(totalNumberOfLamps(school));
+        System.out.println(countLampsInBuilding(school));
         System.out.println(isNormal(school));
     }
 
-    private static int totalNumberOfLamps(Building building) {
+    private static int countLampsInBuilding(Building building) {
         int counter = 0;
         for (Room room : building.getRoomsList()) {
             counter += room.getNumberOfLamps();
@@ -29,7 +29,7 @@ public class Main {
         return counter;
     }
 private static boolean isNormal(Building building){
-        if(building.getNumberOfFloors() > building.getRoomsList().size()){
+        if(building.getNumberOfFloors() < building.getRoomsList().size()){
             return true;
         } else {
             System.out.println("This is an odd building");
